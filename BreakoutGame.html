@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<title>Breakout Game</title>
 	<script type="text/javascript" src="jquery.js"></script>
-
+<style type="text/css">
+        canvas { background:url(./Basemap.png) }
+    </style>
 	<script>
 		$(function() {
 			var canvas = $("canvas")[0];
@@ -66,13 +68,13 @@
 			function drawBrick(x, y, type) {
 				switch (type) {
 					case 1:
-						context.fillStyle = 'orange';
+						context.fillStyle = "#FF44AA";
 						break;
 					case 2:
-						context.fillStyle = 'rgb(100,200,100)';
+						context.fillStyle = "#FF0000";
 						break;
 					case 3:
-						context.fillStyle = 'rgba(50,100,50,.5)';
+						context.fillStyle = "#77DDFF";
 						break;
 					default:
 						context.clearRect(x * brickWidth, y * brickHeight, brickWidth,
@@ -92,7 +94,7 @@
 			var score = 0;
 
 			function displayScoreBoard() {
-				context.fillStyle = 'rgb(50,100,50)';
+				context.fillStyle = "#FFFF00";
 				context.font = "20px Times New Roman";
 
 				context.clearRect(0, canvas.height - 30, canvas.width, 30);
